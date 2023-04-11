@@ -1,38 +1,32 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset = "uft-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <link rel="stylesheet" href="/main.css">
-        <title> Portofolio von Lambo</title>
-    </head>
-    <body>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <ul class="navbar-nav">
-
-            <li><a class="nav-link active" href="/">Home</a></li>
-            <li><a class="nav-link" href="/Blog/index.html">Blog</a></li>
-            <li><a class="nav-link" href="/Projekte/index.html">Projekte</a></li>
-            <li><a class="nav-link" href="/Kontaktinformationen/index.html">Kontakt</a></li>
-        </ul>
-    </div>
-</nav>
-
-<div class="container">
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<h1 class="title text-center">Web Portofolio</h1> 
-<h2>Hallo</h2>
-<p>Schön dass sie da sind.</p>
-<p>Auf Wiedersehen</p>
-<img src ="Strichmännchen.png" alt = "Foto von mir">
-<hr> 
-</div> 
-    </body>
-</html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absenz-System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Absenz</h1>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br>
+      <label for="name">Klasse:</label>
+      <input type="text" id="klasse" name="klasse" required><br>
+      <label for="date">Datum:</label>
+      <input type="date" id="date" name="date" required><br>
+      <label for="type">Art:</label>
+      <select id="type" name="type" required>
+        <option value="">Bitte wählen</option>
+        <option value="krank">Krankheit</option>
+        <option value="urlaub">Urlaub</option>
+        <option value="persoenlich">Persönlich</option>
+      </select><br>
+      <br> 
+      <label for="reason">Grund:</label>
+      <textarea id="reason" name="reason" required></textarea><br>
+      <input type="submit" value="Absenden">
+    </form>
+</body>
+</html>
