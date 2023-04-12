@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absenzen-System BZZ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css">
+</head>
+<body>
+  <nav>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="absenz.html">Absenz</a></li>
+        <li><a href="index.html">Login</a></li>
+    </ul>
+  </nav>
+  
+  <h1>Stundenplan</h1>
+  <form action="">
+    <label for="class">Klasse:</label>
+    <select name="class" id="class">
+      <option value="">Bitte wählen</option>
+      <option value="5a">5a</option>
+      <option value="5b">5b</option>
+      <option value="6a">6a</option>
+      <option value="6b">6b</option>
+    </select>
+    <button type="submit">Stundenplan anzeigen</button>
+  </form>
+  <br>
+  <table>
+    <thead>
+      <tr>
+        <th>Stunde</th>
+        <th>Montag</th>
+        <th>Dienstag</th>
+        <th>Mittwoch</th>
+        <th>Donnerstag</th>
+        <th>Freitag</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Mathe</td>
+        <td>Englisch</td>
+        <td>Deutsch</td>
+        <td>Mathe</td>
+        <td>Englisch</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Englisch</td>
+        <td>Deutsch</td>
+        <td>Mathe</td>
+        <td>Englisch</td>
+        <td>Deutsch</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Kunst</td>
+        <td>Musik</td>
+        <td>Sport</td>
+        <td>Kunst</td>
+        <td>Musik</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Deutsch</td>
+        <td>Mathe</td>
+        <td>Englisch</td>
+        <td>Deutsch</td>
+        <td>Mathe</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Musik</td>
+        <td>Kunst</td>
+        <td>Deutsch</td>
+        <td>Musik</td>
+        <td>Kunst</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <script>
+    // Ausgewählte Klasse abrufen
+const form = document.querySelector('form');
+const select = document.querySelector('select');
+const table = document.querySelector('table');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const klassenname = select.value;
+
+  // Klasse auswählen und anzeigen
+  if (klassenname === '5a') {
+    table.style.display = 'block';
+    document.querySelector('#5a').style.display = 'table';
+    document.querySelector('#5b').style.display = 'none';
+    document.querySelector('#6a').style.display = 'none';
+    document.querySelector('#6b').style.display = 'none';
+  } else if (klassenname === '5b') {
+    table.style.display = 'block';
+    document.querySelector('#5a').style.display = 'none';
+    document.querySelector('#5b').style.display = 'table';
+    document.querySelector('#6a').style.display = 'none';
+    document.querySelector('#6b').style.display = 'none';
+  } else if (klassenname === '6a') {
+    table.style.display = 'block';
+    document.querySelector('#5a').style.display = 'none';
+    document.querySelector('#5b').style.display = 'none';
+    document.querySelector('#6a').style.display = 'table';
+    document.querySelector('#6b').style.display = 'none';
+  } else if (klassenname === '6b') {
+    table.style.display = 'block';
+    document.querySelector('#5a').style.display = 'none';
+    document.querySelector('#5b').style.display = 'none';
+    document.querySelector('#6a').style.display = 'none';
+    document.querySelector('#6b').style.display = 'table';
+  } else {
+    table.style.display = 'none';
+  }
+});
+
+  </script>
+
+</body>
+</html>

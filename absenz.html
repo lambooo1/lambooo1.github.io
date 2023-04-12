@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absenzen-System BZZ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="absenz.html">Absenz</a></li>
+      <li><a href="index.html">Login</a></li>
+    </ul>
+  </nav>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/js/bootstrap.min.js"></script>
+    <h1>Absenz eintragen</h1>
+    <form> 
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br>
+      <label for="name">Klasse:</label>
+      <input type="text" id="klasse" name="klasse" required><br>
+      <label for="date">Datum:</label>
+      <input type="date" id="date" name="date" required><br>
+      <label for="type">Art:</label>
+      <select id="type" name="type" required>
+        <option value="">Bitte wählen</option>
+        <option value="krank">Krankheit</option>
+        <option value="urlaub">Urlaub</option>
+        <option value="persoenlich">Persönlich</option>
+      </select><br>
+      <br> 
+      <label for="reason">Grund:</label>
+      <textarea id="reason" name="reason" required></textarea><br>
+      <input type="submit" value="Absenden">
+    </form>
+</body>
+</html>

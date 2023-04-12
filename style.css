@@ -35,8 +35,8 @@ body {
   }
   
   input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
+    background-color: gainsboro;
+    color: black;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -44,6 +44,81 @@ body {
   }
   
   input[type="submit"]:hover {
-    background-color: #3e8e41;
+    background-color: lightblue;
   }
   
+  nav {
+    background-color: gainsboro; /* Hintergrundfarbe der Navbar */
+    overflow: hidden; /* verhindert, dass die Navbar über den Seiteninhalt hinausgeht */
+}
+
+nav ul {
+    list-style-type: none; /* entfernt die Bulletpoints vor den Nav-Links */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* falls die Links breiter als die Navbar sind */
+}
+
+nav li {
+    float: left; /* positioniert die Nav-Links nebeneinander */
+}
+
+nav li a {
+    display: block; /* macht den Link klickbar und gibt ihm eine Hintergrundfarbe */
+    color: black; /* Schriftfarbe der Links */
+    text-align: center; /* zentriert die Schrift innerhalb des Links */
+    padding: 14px 16px; /* Abstand zwischen Linktext und Navbar-Rand */
+    text-decoration: none; /* entfernt die Standard-Underline von Links */
+}
+
+nav li a:hover {
+    background-color: lightblue; /* Hintergrundfarbe der Links beim Hovern */
+}
+
+.login-form {
+  width: 300px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.login-form input[type="submit"] {
+  background-color: gainsboro;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.login-form input[type="submit"]:hover {
+  background-color: lightblue;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+  text-align: center;
+} 
